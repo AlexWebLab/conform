@@ -173,12 +173,12 @@ export default function ContactUs() {
           required
           minLength={10}
           maxLength={100}
-          aria-invalid={result?.error.message ? true : undefined}
+          aria-invalid={result?.fieldErrors.message ? true : undefined}
           aria-describedby={
-            result?.error.message ? 'contact-email-message' : undefined
+            result?.fieldErrors.message ? 'contact-email-message' : undefined
           }
         />
-        <div id="contact-email-message">{result?.error.message}</div>
+        <div id="contact-email-message">{result?.fieldErrors.message}</div>
       </div>
       <button>Send</button>
     </Form>
